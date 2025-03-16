@@ -1,34 +1,53 @@
-# Deploying-Wazuh-SIEM-on-UbuntuVM
-Spinning up an Ubuntu VM with VMware Workstation and Deploying Wazuh SIEM system on it
-
-# PROJECTNAME
+# Deploying-Wazuh-SIEM
+Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM.
 
 ## Objective
-[Brief Objective - Remove this afterwards]
+This project focuses on deploying a **Wazuh SIEM Manager** on an **AlmaLinux** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+By following this guide, you will learn:
+- How to **download and install** AlmaLinux Minimal ISO.
+- How to **create and configure** an AlmaLinux VM in VMware Workstation.
+- How to **deploy and install** the Wazuh Manager components.
+- How to **access and navigate** the Wazuh web UI for security event monitoring.
 
-### Skills Learned
-[Bullet Points - Remove this afterwards]
+## Skills Learned
+- Virtual machine deployment using **VMware Workstation 17**.
+- **Linux server setup** and configuration (AlmaLinux).
+- Installing and configuring **Wazuh SIEM Manager**.
+- Understanding **SIEM** concepts and security event monitoring.
+- Basic **web UI navigation** for Wazuh.
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
-
-### Tools Used
-[Bullet Points - Remove this afterwards]
-
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+## Tools Used
+- **VMware Workstation 17** – Hypervisor for running the AlmaLinux VM.
+- **AlmaLinux Minimal ISO** – Operating system for the Wazuh Manager.
+- **Wazuh SIEM** – Open-source security monitoring platform.
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
+### 1. Download AlmaLinux Minimal ISO
+- Visit the official [AlmaLinux website](https://almalinux.org/) and download the **Minimal ISO**.
+- Ensure the correct version is selected for your system architecture.
 
-Example below.
+### 2. Create an AlmaLinux VM in VMware Workstation 17
+- Launch VMware Workstation and create a new **Linux-based virtual machine**.
+- Allocate appropriate **CPU, RAM, and storage**.
+- Attach the **AlmaLinux ISO** as the boot media.
 
-*Ref 1: Network Diagram*
+### 3. Install AlmaLinux on the VM
+- Follow the installation prompts to install **AlmaLinux Minimal**.
+- Configure **network settings** and set up a **root user**.
+- Perform **initial system updates** and prepare the system for Wazuh.
+
+### 4. Install and Configure Wazuh Manager
+- Add the Wazuh repository and install the **Wazuh Manager**.
+- Configure **Wazuh services** to start on boot.
+- Open necessary **ports** for Wazuh communication.
+
+### 5. Access and Explore the Wazuh Web UI
+- Log in to the Wazuh web interface.
+- Navigate through the **dashboard**, alerts, and agent management sections.
+- Verify that Wazuh is running and collecting data.
+
+## Screenshots & Diagrams
+Include step-by-step **screenshots** to illustrate key processes.  
+(Example: *Ref 1: AlmaLinux installation screen*)
