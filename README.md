@@ -63,6 +63,8 @@ By following this guide, you will learn:
 - -> Select 'Customize Hardware' -> change memory to 6 GB and processors to 4 Select 'Close'
 - -> Last Select 'Finish'
 - Next we can press enter to begin the OS boot. This could take a little while.
+- Go through the usual OS boot up instructions, there should be 8 steps to go through to finish the installation, most will be automated processes which require no work. Then type the number of the steps that show [!] one at a time to finish them. I did not create a user and only set up a root password, but I will create a user once fully installed.
+- Once you've gone through each of the steps, go ahead and type b and enter to continue the full installation.
 - 
 
 ### 4. Install and Configure Wazuh Manager
