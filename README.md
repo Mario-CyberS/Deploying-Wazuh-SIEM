@@ -67,7 +67,7 @@ By following this guide, you will learn:
 - Go through the rest of the OS boot up instructions, there should be 8 steps to go through to finish the installation, most will be automated processes which require no work. Then type the number of the steps that show [!] one at a time to finish them. I did not create a user and only set up a root password, but I will create a user once fully installed.
 - Once you've gone through each of the steps, go ahead and type b and enter to continue the full installation.
 
-### 4. Set up tools in almalinux and Create our Alma user
+### 4. Create our Alma user
 - Before installing the Wazuh components lets create an Alma user to deploy our Wazuh system with.
 - Run: useradd -m -s /bin/bash WazuhMgr
 - Run: passwd WazuhMgr
@@ -78,8 +78,9 @@ By following this guide, you will learn:
 
 ### 5. Install and Configure Wazuh Manager
 - Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
-- Configure **Wazuh services** to start on boot.
-- Open necessary **ports** for Wazuh communication.
+- Run this quick curl command to easily install all Wazuh components
+- Run: sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+- Open necessary **ports** for Wazuh communication. 1515 1514 443
 
 ### 6. Access and Explore the Wazuh Web UI
 - Log in to the Wazuh web interface.
