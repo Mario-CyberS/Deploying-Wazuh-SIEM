@@ -56,7 +56,7 @@ By following this guide, you will learn:
 
 ### 3. Create an AlmaLinux VM in VMware Workstation 17
 - Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'.
-- You will get a New Virtual Machine Wizard pop-up. Select 'Next'
+- You will get a New Virtual Machine Wizard pop-up. Select 'Next' . You will see the boot menue and you can either wait for the timer to finish and it will auto boot defualt (which could include a GUI), or you can press enter and customize the boot up, like i did (I didn't use a GUI, CML only)
 - -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the Almalinux iso download -> Select 'Next'
 - -> Give it a name 'AlmaLinux 64-bit WazuhMgr' -> Select 'Next'
 - -> Keep the disk size at recommended size and select 'Split virtual disk into multiple files' then Select 'Next'
