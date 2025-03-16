@@ -1,4 +1,4 @@
-# Deploying-Wazuh-SIEM
+# Deploying-Wazuh-SIEM-on-Almalinux9.5-VM
 Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro PC.
 
 ## 🎯 Objective
