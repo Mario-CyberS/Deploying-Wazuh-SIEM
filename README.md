@@ -39,25 +39,37 @@ By following this guide, you will learn:
 ## 📜 Steps
 
 ### 1. Download AlmaLinux Minimal ISO
-- Visit the official [AlmaLinux website](https://almalinux.org/) and download the **Minimal ISO**.
+- Visit the official [AlmaLinux website]([https://almalinux.org/](https://almalinux.org/get-almalinux/)) and download the **9.5 Minimal ISO**.
 - Ensure the correct version is selected for your system architecture.
 
-### 2. Create an AlmaLinux VM in VMware Workstation 17
+### 2. Download VMware Workstation Pro for Windows 
+- Go to the Broadcom website: [Broadcom website]([[https://almalinux.org/](https://almalinux.org/get-almalinux/)](https://support.broadcom.com/)) https://support.broadcom.com/
+- Log in to your Broadcom account
+- On left select "VMware Cloud Foundation"
+- Select "My Downloads"
+- Search for "VMware Workstation"
+- Select "VMware Workstation Pro"
+- Select "VMware Workstation Pro 17.0 for Windows"
+- Select "17.6.1"
+- Select "I agree to the Terms and Conditions"
+- At the lower right click on blue arrow to download
+
+### 3. Create an AlmaLinux VM in VMware Workstation 17
 - Launch VMware Workstation and create a new **Linux-based virtual machine**.
 - Allocate appropriate **CPU, RAM, and storage**.
 - Attach the **AlmaLinux ISO** as the boot media.
 
-### 3. Install AlmaLinux on the VM
+### 4. Install AlmaLinux on the VM
 - Follow the installation prompts to install **AlmaLinux Minimal**.
 - Configure **network settings** and set up a **root user**.
 - Perform **initial system updates** and prepare the system for Wazuh.
 
-### 4. Install and Configure Wazuh Manager
+### 5. Install and Configure Wazuh Manager
 - Add the Wazuh repository and install the **Wazuh Manager**.
 - Configure **Wazuh services** to start on boot.
 - Open necessary **ports** for Wazuh communication.
 
-### 5. Access and Explore the Wazuh Web UI
+### 6. Access and Explore the Wazuh Web UI
 - Log in to the Wazuh web interface.
 - Navigate through the **dashboard**, alerts, and agent management sections.
 - Verify that Wazuh is running and collecting data.
