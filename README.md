@@ -1,7 +1,7 @@
 # Deploying-Wazuh-SIEM
 Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro PC.
 
-## Objective
+## 🎯 Objective
 This project focuses on deploying a **Wazuh SIEM Manager** on an **AlmaLinux** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
 
 ### What is Wazuh?
