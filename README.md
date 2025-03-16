@@ -43,7 +43,7 @@ By following this guide, you will learn:
 - Ensure the correct version is selected for your system architecture.
 
 ### 2. Download VMware Workstation Pro for Windows 
-- Go to the Broadcom website: [Broadcom website]([[https://almalinux.org/](https://almalinux.org/get-almalinux/)](https://support.broadcom.com/)) https://support.broadcom.com/
+- Go to the Broadcom website: [Broadcom website](https://support.broadcom.com/) https://support.broadcom.com/
 - Log in to your Broadcom account
 - On left select "VMware Cloud Foundation"
 - Select "My Downloads"
