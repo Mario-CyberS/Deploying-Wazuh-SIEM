@@ -44,7 +44,7 @@ By following this guide, you will learn:
 
 ### 2. Download VMware Workstation Pro for Windows 
 - Go to the Broadcom website: [Broadcom website](https://support.broadcom.com/)
-- Log in to your Broadcom account
+- Log in to your Broadcom account or create a personal use account
 - On left select "VMware Cloud Foundation"
 - Select "My Downloads"
 - Search for "VMware Workstation"
