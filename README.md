@@ -24,19 +24,19 @@ By following this guide, you will learn:
 - How to **deploy and install** the Wazuh Manager components.
 - How to **access and navigate** the Wazuh web UI for security event monitoring.
 
-## Skills Learned
+## 📚 Skills Learned
 - Virtual machine deployment using **VMware Workstation 17 Pro**.
 - **Linux server setup** and configuration (AlmaLinux).
 - Installing and configuring **Wazuh SIEM Manager**.
 - Understanding **SIEM** concepts and security event monitoring.
 - Basic **web UI navigation** for Wazuh.
 
-## Tools Used
+## 🛠️ Tools Used
 - **VMware Workstation 17** – Hypervisor for running the AlmaLinux VM.
 - **AlmaLinux Minimal ISO** – Operating system for the Wazuh Manager.
 - **Wazuh SIEM** – Open-source security monitoring platform.
 
-## Steps
+## 📜 Steps
 
 ### 1. Download AlmaLinux Minimal ISO
 - Visit the official [AlmaLinux website](https://almalinux.org/) and download the **Minimal ISO**.
