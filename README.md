@@ -56,8 +56,13 @@ By following this guide, you will learn:
 
 ### 3. Create an AlmaLinux VM in VMware Workstation 17
 - Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'.
-- You will get a New Virtual Machine Wizard pop-up. Select 'Next' -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the Almalinux iso download -> Select 'Next' -> Give it a name 'AlmaLinux 64-bit WazuhMgr' -> Select 'Next' -> Keep the disk size at recommended size and select 'Split virtual disk into multiple files' then Select 'Next' -> Select 'Customize Hardware' -> change memory to 6 GB and processors to 4 Select 'Close' -> Last Select 'Finish'
-- Next we can press enter to begin the OS boot.
+- You will get a New Virtual Machine Wizard pop-up. Select 'Next'
+- -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the Almalinux iso download -> Select 'Next'
+- -> Give it a name 'AlmaLinux 64-bit WazuhMgr' -> Select 'Next'
+- -> Keep the disk size at recommended size and select 'Split virtual disk into multiple files' then Select 'Next'
+- -> Select 'Customize Hardware' -> change memory to 6 GB and processors to 4 Select 'Close'
+- -> Last Select 'Finish'
+- Next we can press enter to begin the OS boot. This could take a little while.
 - 
 
 ### 4. Install and Configure Wazuh Manager
