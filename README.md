@@ -25,7 +25,7 @@ By following this guide, you will learn:
 - How to **access and navigate** the Wazuh web UI for security event monitoring.
 
 ## Skills Learned
-- Virtual machine deployment using **VMware Workstation 17**.
+- Virtual machine deployment using **VMware Workstation 17 Pro**.
 - **Linux server setup** and configuration (AlmaLinux).
 - Installing and configuring **Wazuh SIEM Manager**.
 - Understanding **SIEM** concepts and security event monitoring.
