@@ -80,13 +80,31 @@ By following this guide, you will learn:
 - Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
 - Run this quick curl command to easily install all Wazuh components
 - Run: sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
-- Open necessary **ports** for Wazuh communication. 1515 1514 443
+- Once the installation finishes we want to take not of our admin account sign in for the Wazuh WebUI
+- (User) admin
+- (Password) long list of ramdom characters under admin
+- Now lets download net-tools to run important commands
+- Run: dnf install -y net-tools
+- Then run this next command to get your VMs IP address which we will use to access the Wazuh WebUI
+- Run: ifconfig
+- Our IP will be in the 'ens' section labeled 'inet', usually starting with 192.
+- Now we must open some ports in order for wazuh to communicate properly, the ports are 1515, 1514, 443
+- First check if the firewall is running, if its not enable with 'sudo systemctl start firewalld' & 'sudo systemctl enable firewalld'
+- Run: sudo systemctl status firewalld
+- Next allow incoming traffic on the 3 ports
+- Run: sudo firewall-cmd --zone=public --add-port=1514/tcp --permanent
+- Run: sudo firewall-cmd --zone=public --add-port=1514/udp --permanent
+- Run: sudo firewall-cmd --zone=public --add-port=1515/tcp --permanent
+- Run: sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
+- Now reboot the firewall
+- Run: sudo firewall-cmd --reload
 
-### 6. Access and Explore the Wazuh Web UI
-- Log in to the Wazuh web interface.
-- Navigate through the **dashboard**, alerts, and agent management sections.
-- Verify that Wazuh is running and collecting data.
+### 6. Access the Wazuh Web UI
+- Great now we are ready to connect to our Wazuh WebUI
+- Open up a browser on your Windows PC and go to https://<wazuh-IP-address>:443
+- This will bring you to the security page, Select 'Advanced' and then 'Proceed'
+- Now we login, use the admin user and pass to do this
+- You are now logged in!
 
-## Screenshots & Diagrams
-Include step-by-step **screenshots** to illustrate key processes.  
-(Example: *Ref 1: AlmaLinux installation screen*)
+### 7. Explore the Wazuh Web UI
+- 
