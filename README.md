@@ -39,7 +39,7 @@ By following this guide, you will learn:
 ## 📜 Steps
 
 ### 1. Download AlmaLinux Minimal ISO
-- Visit the official [AlmaLinux website]([https://almalinux.org/](https://almalinux.org/get-almalinux/)) and download the **9.5 Minimal ISO**.
+-Visit the official [AlmaLinux website](https://almalinux.org/get-almalinux/) and download the **9.5 Minimal ISO**.
 - Ensure the correct version is selected for your system architecture.
 
 ### 2. Download VMware Workstation Pro for Windows 
