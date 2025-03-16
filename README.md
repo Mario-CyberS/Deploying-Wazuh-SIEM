@@ -55,21 +55,17 @@ By following this guide, you will learn:
 - At the lower right click on blue arrow to download
 
 ### 3. Create an AlmaLinux VM in VMware Workstation 17
-- Launch VMware Workstation and create a new **Linux-based virtual machine**.
-- Allocate appropriate **CPU, RAM, and storage**.
-- Attach the **AlmaLinux ISO** as the boot media.
+- Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'.
+- You will get a New Virtual Machine Wizard pop-up. Select 'Next' -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the Almalinux iso download -> Select 'Next' -> Give it a name 'AlmaLinux 64-bit WazuhMgr' -> Select 'Next' -> Keep the disk size at recommended size and select 'Split virtual disk into multiple files' then Select 'Next' -> Select 'Customize Hardware' -> change memory to 6 GB and processors to 4 Select 'Close' -> Last Select 'Finish'
+- Next we can press enter to begin the OS boot.
+- 
 
-### 4. Install AlmaLinux on the VM
-- Follow the installation prompts to install **AlmaLinux Minimal**.
-- Configure **network settings** and set up a **root user**.
-- Perform **initial system updates** and prepare the system for Wazuh.
-
-### 5. Install and Configure Wazuh Manager
+### 4. Install and Configure Wazuh Manager
 - Add the Wazuh repository and install the **Wazuh Manager**.
 - Configure **Wazuh services** to start on boot.
 - Open necessary **ports** for Wazuh communication.
 
-### 6. Access and Explore the Wazuh Web UI
+### 5. Access and Explore the Wazuh Web UI
 - Log in to the Wazuh web interface.
 - Navigate through the **dashboard**, alerts, and agent management sections.
 - Verify that Wazuh is running and collecting data.
