@@ -63,16 +63,25 @@ By following this guide, you will learn:
 - -> Select 'Customize Hardware' -> change memory to 6 GB and processors to 4 Select 'Close'
 - -> Last Select 'Finish'
 - Next we can press enter to begin the OS boot. This could take a little while.
-- Go through the usual OS boot up instructions, there should be 8 steps to go through to finish the installation, most will be automated processes which require no work. Then type the number of the steps that show [!] one at a time to finish them. I did not create a user and only set up a root password, but I will create a user once fully installed.
+- We are not done configuring the installation yet, once done, we will select the disk we want to use, type the number of the disk option you want then press enter. You can then stick with the default options of the next couple of questions, type their number the enter.
+- Go through the rest of the OS boot up instructions, there should be 8 steps to go through to finish the installation, most will be automated processes which require no work. Then type the number of the steps that show [!] one at a time to finish them. I did not create a user and only set up a root password, but I will create a user once fully installed.
 - Once you've gone through each of the steps, go ahead and type b and enter to continue the full installation.
-- 
 
-### 4. Install and Configure Wazuh Manager
-- Add the Wazuh repository and install the **Wazuh Manager**.
+### 4. Set up tools in almalinux and Create our Alma user
+- Before installing the Wazuh components lets create an Alma user to deploy our Wazuh system with.
+- Run: useradd -m -s /bin/bash WazuhMgr
+- Run: passwd WazuhMgr
+- Now that the user is created lets add it to the wheel group for sudo privileges
+- Run: usermod -aG wheel WazuhMgr
+- Now we can switch user to WazuhMgr
+- Run: su - WazuhMgr
+
+### 5. Install and Configure Wazuh Manager
+- Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
 - Configure **Wazuh services** to start on boot.
 - Open necessary **ports** for Wazuh communication.
 
-### 5. Access and Explore the Wazuh Web UI
+### 6. Access and Explore the Wazuh Web UI
 - Log in to the Wazuh web interface.
 - Navigate through the **dashboard**, alerts, and agent management sections.
 - Verify that Wazuh is running and collecting data.
