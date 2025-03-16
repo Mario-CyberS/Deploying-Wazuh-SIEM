@@ -4,6 +4,9 @@ Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM.
 ## Objective
 This project focuses on deploying a **Wazuh SIEM Manager** on an **AlmaLinux** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
 
+### What is Wazuh?
+**Wazuh** is a free, open-source **SIEM and XDR (Extended Detection and Response) platform** that provides threat detection, security monitoring, and compliance enforcement. It is widely used by security professionals to analyze logs, detect anomalies, and respond to security incidents in real-time. Wazuh supports **multi-platform agents** and integrates with various security tools, making it a powerful solution for cybersecurity operations without licensing costs.
+
 By following this guide, you will learn:
 - How to **download and install** AlmaLinux Minimal ISO.
 - How to **create and configure** an AlmaLinux VM in VMware Workstation.
