@@ -1,5 +1,5 @@
 # Deploying-Wazuh-SIEM-on-Almalinux9.5-VM
-Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro PC.
+Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro, DELL OptiPlex 7050 SFF PC.
 
 ## 🎯 Objective
 This project focuses on deploying a **Wazuh SIEM Manager** on an **AlmaLinux** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
@@ -9,7 +9,7 @@ This project focuses on deploying a **Wazuh SIEM Manager** on an **AlmaLinux** v
 
 ## 📝 Note: Real-World Deployments  
 
-While this project focuses on setting up Wazuh SIEM on a **VMware Workstation 17** virtual machine for a personal lab environment, cybersecurity professionals in enterprise settings work with a variety of deployment infrastructures, including:  
+While this project focuses on setting up Wazuh SIEM on a **VMware Workstation 17.5.2** virtual machine for a personal lab environment, cybersecurity professionals in enterprise settings work with a variety of deployment infrastructures, including:  
 
 - **On-Premises Data Centers** – Physical servers running hypervisors like **VMware ESXi**, **Proxmox**, or **Hyper-V** to host critical security applications.  
 - **Cloud-Based Deployments** – Organizations often deploy SIEM solutions in **Azure, AWS, or Google Cloud**, using virtual machines, Kubernetes clusters, or managed SIEM services.  
