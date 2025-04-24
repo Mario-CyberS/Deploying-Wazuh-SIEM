@@ -41,13 +41,13 @@ By following this guide, you will learn:
 ## 📜 Steps
 
 ### 1. Download RHEL Minimal ISO
--Visit the official [RHEL ISO Download website](https://developers.redhat.com/products/rhel/download) and download the **Latest Minimal ISO**.
-- You must click on the "Activate your subscription" button.
-- Then create an accont and follow the steps to get your RHEL iso download.
-- Ensure the correct version is selected for your system architecture.
+Visit the official [RHEL ISO Download website](https://developers.redhat.com/products/rhel/download) and download the **Latest Minimal ISO**.
+You must click on the "Activate your subscription" button.
+Then create an accont and follow the steps to get your RHEL iso download.
+Ensure the correct version is selected for your system architecture.
 
 ### 2. Download VMware Workstation Pro for Windows 
-- Go to the Broadcom website: [Broadcom website](https://support.broadcom.com/)
+Go to the Broadcom website: [Broadcom website](https://support.broadcom.com/)
 - Log in to your Broadcom account or create a personal use account
 - On left select "VMware Cloud Foundation"
 - Select "My Downloads"
@@ -59,7 +59,7 @@ By following this guide, you will learn:
 - At the lower right click on blue arrow to download
 
 ### 3. Create a RHEL VM in VMware Workstation 17
-- Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'. A new VM installer window will pop-up.
+Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'. A new VM installer window will pop-up.
 - -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the RHEL iso download -> Select 'Next'
 - -> Give it a name 'RHEL 9.5 WazuhMgr' -> Select 'Next'
 - -> Keep the disk size at recommended size and select 'Split virtual disk into multiple files' then Select 'Next'
@@ -67,56 +67,56 @@ By following this guide, you will learn:
 - -> Last Select 'Finish'
 - Next you can press start marchine and the VM will boot up, this will take you to the boot up options.
 - Customize these as you please, you will have to register the VM with your RHEL account you made earlier.
-- Also I chose to boot this VM with a GUI in order to use the VMware tools like copy and paste from local PC to VM.
+- Also, I chose to boot this VM with a GUI in order to use the VMware tools like copy and paste from local PC to VM.
 - You can also choose to set root pass, do that. Also you can create your Wazuh user, call it WazuhMgr and give it admin role. You can also do this after the boot via CLI.
 
 ### 4. Create our Linux user
-- Before installing the Wazuh components lets create a Linux user to deploy our Wazuh system with (Run this in Wazuh Box CLI):
+Before installing the Wazuh components lets create a Linux user to deploy our Wazuh system with (Run this in Wazuh Box CLI):
 ```bash
 useradd -m -s /bin/bash WazuhMgr
 ```
-- Change the users pass:
+Change the users pass:
 ```bash
 passwd WazuhMgr
 ```
-- Now that the user is created lets add it to the wheel group for sudo privileges
+Now that the user is created lets add it to the wheel group for sudo privileges
 ```bash
 usermod -aG wheel WazuhMgr
 ```
-- Now we can switch user to WazuhMgr
+Now we can switch user to WazuhMgr
 ```bash
 su - WazuhMgr
 ```
 
 ### 5. Install and Configure Wazuh Manager
-- Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
-- Run this quick curl command to easily install all Wazuh components:
+Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
+Run this quick curl command to easily install all Wazuh components:
 ```bash
 sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
-- Once the installation finishes we want to take note of our admin account sign in for the Wazuh WebUI
-- (User) admin
-- (Password) long list of ramdom characters under admin
-- Now lets download net-tools to run important commands:
+Once the installation finishes we want to take note of our admin account sign in for the Wazuh WebUI
+(User) admin
+(Password) long list of ramdom characters under admin
+Now lets download net-tools to run important commands:
 ```bash
 dnf install -y net-tools
 ```
-- Then run this next command to get your VMs IP address which we will use to access the Wazuh WebUI:
+Then run this next command to get your VMs IP address which we will use to access the Wazuh WebUI:
 ```bash
 ifconfig
 ```
-- Our IP will be in the 'ens' section labeled 'inet', usually starting with 192.
-- Now we must open some ports in order for wazuh to communicate properly, the ports are 1515, 1514, 443
-- First check if the firewall is running:
+Our IP will be in the 'ens' section labeled 'inet', usually starting with 192.
+Now we must open some ports in order for wazuh to communicate properly, the ports are 1515, 1514, 443
+First check if the firewall is running:
 ```bash
 sudo systemctl status firewalld
 ```
-- If its not enable it with:
+If its not enable it with:
 ```bash
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
 ```
-- Next allow incoming traffic on the 3 ports:
+Next allow incoming traffic on the 3 ports:
 ```bash
 sudo firewall-cmd --zone=public --add-port=1514/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=1514/udp --permanent
@@ -126,14 +126,14 @@ sudo firewall-cmd --reload
 ```
 
 ### 6. Access the Wazuh Web UI
-- Great now we are ready to connect to our Wazuh WebUI
-- Open up a browser on your Windows PC and go to:
+Great now we are ready to connect to our Wazuh WebUI
+Open up a browser on your Windows PC and go to:
 ```bash
 https://<wazuh-IP-address>:443
 ```
-- This will bring you to the security page, Select 'Advanced' and then 'Proceed'
-- Now we login, use the admin user and pass to do this
-- You are now logged in!
+This will bring you to the security page, Select 'Advanced' and then 'Proceed'
+Now we login, use the admin user and pass to do this
+You are now logged in!
 
 ---
 
