@@ -33,9 +33,9 @@ By following this guide, you will learn:
 
 ## 🛠️ Tools Used
 <div>
-  <img src="https://img.shields.io/badge/-VMware_Workstation_17-607078?&style=for-the-badge&logo=VMware&logoColor=white" />
-  <img src="https://img.shields.io/badge/-AlmaLinux-2442FF?&style=for-the-badge&logo=AlmaLinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Wazuh_SIEM-000000?&style=for-the-badge&logo=Wazuh&logoColor=white" />
+  <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion" target="_blank"><img src="https://img.shields.io/badge/-VMware_Workstation_17-607078?&style=for-the-badge&logo=VMware&logoColor=white" />
+  <a href="https://almalinux.org/get-almalinux/" target="_blank"><img src="https://img.shields.io/badge/-AlmaLinux-2442FF?&style=for-the-badge&logo=AlmaLinux&logoColor=white" />
+  <a href="https://documentation.wazuh.com/current/quickstart.html" target="_blank"><img src="https://img.shields.io/badge/-Wazuh-0078D4?&style=for-the-badge&logo=Wazuh&logoColor=white" />
 </div>
 
 ## 📜 Steps
