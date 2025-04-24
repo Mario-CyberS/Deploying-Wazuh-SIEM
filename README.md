@@ -22,7 +22,7 @@ By following this guide, you will learn:
 - How to **download and install** AlmaLinux Minimal ISO.
 - How to **create and configure** an AlmaLinux VM in VMware Workstation.
 - How to **deploy and install** the Wazuh Manager components.
-- How to **access and navigate** the Wazuh web UI for security event monitoring.
+- How to **access** the Wazuh web UI for security event monitoring.
 
 ## 📚 Skills Learned
 - Virtual machine deployment using **VMware Workstation 17 Pro**.
