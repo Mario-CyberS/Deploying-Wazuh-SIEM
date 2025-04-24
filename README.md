@@ -70,40 +70,66 @@ By following this guide, you will learn:
 - Once you've gone through each of the steps, go ahead and type b and enter to continue the full installation.
 
 ### 4. Create our Alma user
-- Before installing the Wazuh components lets create an Alma user to deploy our Wazuh system with.
-- Run: useradd -m -s /bin/bash WazuhMgr
-- Run: passwd WazuhMgr
+- Before installing the Wazuh components lets create an Alma user to deploy our Wazuh system with:
+```bash
+useradd -m -s /bin/bash WazuhMgr
+```
+- Change the users pass:
+```bash
+passwd WazuhMgr
+```
 - Now that the user is created lets add it to the wheel group for sudo privileges
-- Run: usermod -aG wheel WazuhMgr
+```bash
+usermod -aG wheel WazuhMgr
+```
 - Now we can switch user to WazuhMgr
-- Run: su - WazuhMgr
+```bash
+su - WazuhMgr
+```
 
 ### 5. Install and Configure Wazuh Manager
 - Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
-- Run this quick curl command to easily install all Wazuh components
-- Run: sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+- Run this quick curl command to easily install all Wazuh components:
+```bash
+sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+```
 - Once the installation finishes we want to take not of our admin account sign in for the Wazuh WebUI
 - (User) admin
 - (Password) long list of ramdom characters under admin
-- Now lets download net-tools to run important commands
-- Run: dnf install -y net-tools
-- Then run this next command to get your VMs IP address which we will use to access the Wazuh WebUI
-- Run: ifconfig
+- Now lets download net-tools to run important commands:
+```bash
+dnf install -y net-tools
+```
+- Then run this next command to get your VMs IP address which we will use to access the Wazuh WebUI:
+```bash
+ifconfig
+```
 - Our IP will be in the 'ens' section labeled 'inet', usually starting with 192.
 - Now we must open some ports in order for wazuh to communicate properly, the ports are 1515, 1514, 443
-- First check if the firewall is running, if its not enable with 'sudo systemctl start firewalld' & 'sudo systemctl enable firewalld'
-- Run: sudo systemctl status firewalld
-- Next allow incoming traffic on the 3 ports
-- Run: sudo firewall-cmd --zone=public --add-port=1514/tcp --permanent
-- Run: sudo firewall-cmd --zone=public --add-port=1514/udp --permanent
-- Run: sudo firewall-cmd --zone=public --add-port=1515/tcp --permanent
-- Run: sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
-- Now reboot the firewall
-- Run: sudo firewall-cmd --reload
+- First check if the firewall is running:
+```bash
+sudo systemctl status firewalld
+```
+- If its not enable it with:
+```bash
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+```
+- Next allow incoming traffic on the 3 ports:
+```bash
+sudo firewall-cmd --zone=public --add-port=1514/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=1514/udp --permanent
+sudo firewall-cmd --zone=public --add-port=1515/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
+sudo firewall-cmd --reload
+```
 
 ### 6. Access the Wazuh Web UI
 - Great now we are ready to connect to our Wazuh WebUI
-- Open up a browser on your Windows PC and go to https://<wazuh-IP-address>:443
+- Open up a browser on your Windows PC and go to:
+```bash
+https://<wazuh-IP-address>:443
+```
 - This will bring you to the security page, Select 'Advanced' and then 'Proceed'
 - Now we login, use the admin user and pass to do this
 - You are now logged in!
