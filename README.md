@@ -1,8 +1,8 @@
-# Deploying Wazuh SIEM on Almalinux9.5 VM
+# Deploying Wazuh SIEM on a Red Hat Enterprise Linux VM
 Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro, DELL OptiPlex 7050 SFF PC.
 
 ## 🎯 Objective
-This project focuses on deploying a **Wazuh SIEM Manager** on an **AlmaLinux** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
+This project focuses on deploying a **Wazuh SIEM Manager** on an **RHEL** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
 
 ### What is Wazuh?
 **Wazuh** is a free, open-source **SIEM and XDR (Extended Detection and Response) platform** that provides threat detection, security monitoring, and compliance enforcement. It is widely used by security professionals to analyze logs, detect anomalies, and respond to security incidents in real-time. Wazuh supports **multi-platform agents** and integrates with various security tools, making it a powerful solution for cybersecurity operations without licensing costs.
@@ -19,29 +19,31 @@ While this project focuses on setting up Wazuh SIEM on a **VMware Workstation 17
 Understanding virtualization in **VMware Workstation** is a great starting point, but professionals often transition to handling enterprise-scale deployments across complex infrastructures.
 
 By following this guide, you will learn:
-- How to **download and install** AlmaLinux Minimal ISO.
-- How to **create and configure** an AlmaLinux VM in VMware Workstation.
+- How to **download and install** RHEL Minimal ISO.
+- How to **create and configure** an RHEL VM in VMware Workstation.
 - How to **deploy and install** the Wazuh Manager components.
 - How to **access** the Wazuh web UI for security event monitoring.
 
 ## 📚 Skills Learned
 - Virtual machine deployment using **VMware Workstation 17 Pro**.
-- **Linux server setup** and configuration (AlmaLinux).
+- **Linux server setup** and configuration (RHEL).
 - Installing and configuring **Wazuh SIEM Manager**.
 - Understanding **SIEM** concepts and security event monitoring.
-- Basic **web UI navigation** for Wazuh.
+- Basic **Web UI navigation** for Wazuh.
 
 ## 🛠️ Tools Used
 <div>
   <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion" target="_blank"><img src="https://img.shields.io/badge/-VMware_Workstation_17-607078?&style=for-the-badge&logo=VMware&logoColor=white" />
-  <a href="https://almalinux.org/get-almalinux/" target="_blank"><img src="https://img.shields.io/badge/-AlmaLinux-2442FF?&style=for-the-badge&logo=AlmaLinux&logoColor=white" />
+  <a href="https://developers.redhat.com/products/rhel/download" target="_blank"><img src="https://img.shields.io/badge/-RHEL-EE0000?&style=for-the-badge&logo=Red-Hat&logoColor=white" />
   <a href="https://documentation.wazuh.com/current/quickstart.html" target="_blank"><img src="https://img.shields.io/badge/-Wazuh-0078D4?&style=for-the-badge&logo=Wazuh&logoColor=white" />
 </div>
 
 ## 📜 Steps
 
-### 1. Download AlmaLinux Minimal ISO
--Visit the official [AlmaLinux website](https://almalinux.org/get-almalinux/) and download the **9.5 Minimal ISO**.
+### 1. Download RHEL Minimal ISO
+-Visit the official [RHEL ISO Download website](https://developers.redhat.com/products/rhel/download) and download the **Latest Minimal ISO**.
+- You must click on the "Activate your subscription".
+- Then create an accont and follow the steps to get your RHEL iso download.
 - Ensure the correct version is selected for your system architecture.
 
 ### 2. Download VMware Workstation Pro for Windows 
@@ -56,21 +58,20 @@ By following this guide, you will learn:
 - Select "I agree to the Terms and Conditions"
 - At the lower right click on blue arrow to download
 
-### 3. Create an AlmaLinux VM in VMware Workstation 17
-- Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'.
-- You will get a New Virtual Machine Wizard pop-up. Select 'Next' . You will see the boot menue and you can either wait for the timer to finish and it will auto boot defualt (which could include a GUI), or you can press enter and customize the boot up, like i did (I didn't use a GUI, CML only)
-- -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the Almalinux iso download -> Select 'Next'
-- -> Give it a name 'AlmaLinux 64-bit WazuhMgr' -> Select 'Next'
+### 3. Create a RHEL VM in VMware Workstation 17
+- Launch VMware Workstation and create a new VM by selection 'File' at the top left, then select 'New Virtual Machine'. A new VM installer window will pop-up.
+- -> Select 'Installer disc image file (iso):' -> Select 'Browse' -> Select the RHEL iso download -> Select 'Next'
+- -> Give it a name 'RHEL 9.5 WazuhMgr' -> Select 'Next'
 - -> Keep the disk size at recommended size and select 'Split virtual disk into multiple files' then Select 'Next'
-- -> Select 'Customize Hardware' -> change memory to 6 GB and processors to 4 Select 'Close'
+- -> Select 'Customize Hardware' -> change memory to 4 GB and processors to 4 Select 'Close'
 - -> Last Select 'Finish'
-- Next we can press enter to begin the OS boot. This could take a little while.
-- We are not done configuring the installation yet, once done, we will select the disk we want to use, type the number of the disk option you want then press enter. You can then stick with the default options of the next couple of questions, type their number the enter.
-- Go through the rest of the OS boot up instructions, there should be 8 steps to go through to finish the installation, most will be automated processes which require no work. Then type the number of the steps that show [!] one at a time to finish them. I did not create a user and only set up a root password, but I will create a user once fully installed.
-- Once you've gone through each of the steps, go ahead and type b and enter to continue the full installation.
+- Next you can press start marchine and the VM will boot up, this will take you to the boot up options.
+- Customize these as you please, you will have to register the VM with your RHEL account you made earlier.
+- Also I chose to boot this VM with a GUI in order to use the VMware tools like copy and paste from local PC to VM.
+- You can also choose to set root pass, do that. Also you can create your Wazuh user, call it WazuhMgr and give it admin role. You can also do this after the boot via CLI.
 
-### 4. Create our Alma user
-- Before installing the Wazuh components lets create an Alma user to deploy our Wazuh system with:
+### 4. Create our Linux user
+- Before installing the Wazuh components lets create a Linux user to deploy our Wazuh system with (Run this in Wazuh Box CLI):
 ```bash
 useradd -m -s /bin/bash WazuhMgr
 ```
@@ -93,7 +94,7 @@ su - WazuhMgr
 ```bash
 sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
-- Once the installation finishes we want to take not of our admin account sign in for the Wazuh WebUI
+- Once the installation finishes we want to take note of our admin account sign in for the Wazuh WebUI
 - (User) admin
 - (Password) long list of ramdom characters under admin
 - Now lets download net-tools to run important commands:
