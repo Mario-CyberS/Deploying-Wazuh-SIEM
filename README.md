@@ -1,5 +1,5 @@
 # Deploying Wazuh SIEM on a Red Hat Enterprise Linux VM
-Setting up an AlmaLinux VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro, DELL OptiPlex 7050 SFF PC.
+Setting up a RHEL VM on VMware Workstation and deploying Wazuh SIEM, using a Windows 11 Pro, DELL OptiPlex 7050 SFF PC.
 
 ## 🎯 Objective
 This project focuses on deploying a **Wazuh SIEM Manager** on an **RHEL** virtual machine (VM) using **VMware Workstation 17**. The goal is to establish a functional **Security Information and Event Management (SIEM)** system for security monitoring and log analysis.
