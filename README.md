@@ -42,7 +42,7 @@ By following this guide, you will learn:
 
 ### 1. Download RHEL Minimal ISO
 -Visit the official [RHEL ISO Download website](https://developers.redhat.com/products/rhel/download) and download the **Latest Minimal ISO**.
-- You must click on the "Activate your subscription".
+- You must click on the "Activate your subscription" button.
 - Then create an accont and follow the steps to get your RHEL iso download.
 - Ensure the correct version is selected for your system architecture.
 
