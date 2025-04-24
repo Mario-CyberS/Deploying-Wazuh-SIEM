@@ -106,5 +106,3 @@ By following this guide, you will learn:
 - Now we login, use the admin user and pass to do this
 - You are now logged in!
 
-### 7. Explore the Wazuh Web UI
-- 
