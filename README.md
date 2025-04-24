@@ -32,9 +32,11 @@ By following this guide, you will learn:
 - Basic **web UI navigation** for Wazuh.
 
 ## 🛠️ Tools Used
-- **VMware Workstation 17** – Hypervisor for running the AlmaLinux VM.
-- **AlmaLinux Minimal ISO** – Operating system for the Wazuh Manager.
-- **Wazuh SIEM** – Open-source security monitoring platform.
+<div>
+  <img src="https://img.shields.io/badge/-VMware_Workstation_17-607078?&style=for-the-badge&logo=VMware&logoColor=white" />
+  <img src="https://img.shields.io/badge/-AlmaLinux-2442FF?&style=for-the-badge&logo=AlmaLinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Wazuh_SIEM-000000?&style=for-the-badge&logo=Wazuh&logoColor=white" />
+</div>
 
 ## 📜 Steps
 
