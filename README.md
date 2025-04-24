@@ -134,3 +134,7 @@ https://<wazuh-IP-address>:443
 - Now we login, use the admin user and pass to do this
 - You are now logged in!
 
+---
+
+### 👨‍💻 Author
+Mario Tagaras | Florida State University Alum
