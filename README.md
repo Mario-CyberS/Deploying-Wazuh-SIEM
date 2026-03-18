@@ -90,7 +90,7 @@ su - WazuhMgr
 
 ### 5. Install and Configure Wazuh Manager
 Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
-Run this quick curl command to easily install all Wazuh components:
+Run this quick curl command to easily install all Wazuh components (Make sure to get the most recent version of this curl command):
 ```bash
 sudo curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
