@@ -92,7 +92,7 @@ su - WazuhMgr
 Here is the quikstart documentation that can be followed to install this: [Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) 
 Run this quick curl command to easily install all Wazuh components:
 ```bash
-sudo curl -sO https://packages.wazuh.com/4.11/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+sudo curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
 Once the installation finishes we want to take note of our admin account sign in for the Wazuh WebUI
 (User) admin
