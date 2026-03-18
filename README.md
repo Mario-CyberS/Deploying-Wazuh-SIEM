@@ -71,7 +71,7 @@ Launch VMware Workstation and create a new VM by selection 'File' at the top lef
 - You can also choose to set root pass, do that. Also you can create your Wazuh user, call it WazuhMgr and give it admin role. You can also do this after the boot via CLI.
 
 ### 4. Create our Linux user
-Before installing the Wazuh components lets create a Linux user to deploy our Wazuh system with (Run this in Wazuh Box CLI):
+Before installing the Wazuh components lets create a Linux user to deploy our Wazuh system with (Run this in Wazuh Box CLI) or just use your local user:
 ```bash
 useradd -m -s /bin/bash WazuhMgr
 ```
