@@ -118,9 +118,10 @@ sudo systemctl enable firewalld
 ```
 Next allow incoming traffic on the 3 ports:
 ```bash
+sudo firewall-cmd --zone=public --add-port=55000/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=1514/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=1514/udp --permanent
 sudo firewall-cmd --zone=public --add-port=1515/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=514/udp --permanent
 sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
 sudo firewall-cmd --reload
 ```
